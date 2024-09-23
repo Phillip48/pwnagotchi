@@ -4,9 +4,9 @@
 ## Hardware
 To build this there are a few things you'll need:
 1. Raspberry PI Zero W.
-2. Waveshare Ink Screen.
+2. Waveshare E-Ink Display.
 3. Micro SD Card - 8GB Min.
-4. Optionally, a Pi Sugar battery so you can take your pwnagotchi with you.
+4. Optionally, you can get a Pisugar2 Portable 1200 mAh UPS Lithium Battery so you can take your pwnagotchi with you.
 5. If you'd like to make use of some awesome plugins like saving GPS coordinates whenever an handshake is captured then you'll need a GPS/GLONASS USB.
 6. Lastly, if you like it to lok more professional and not so bare bones you can either buy or 3d print a case for your pwnagotchi.
 
