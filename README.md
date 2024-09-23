@@ -16,4 +16,8 @@ You'll need to download a dew things before getting started:
 2. balenaEtcher - to flash your micro sd card with the pwnagotchi img.
 3. Optionally, you could use a VPN with your pwnagotchi so if that's something you want to do then you can get that now. An option is Proton VPN since you can get the free version of that.
 
+## Important Links
+* https://github.com/jayofelony/pwnagotchi
+* https://pwnagotchi.ai/
+
 ## Steps
