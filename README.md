@@ -19,7 +19,7 @@ To build this there are a few things you'll need:
 7. Lastly, if you like it to lok more professional and not so bare bones you can either buy or 3d print a case for your pwnagotchi.
 
 ## Prerequisite 
-You'll need to download a dew things before getting started:
+You'll need to download a few things before getting started:
 1. Filezila - to easily modify the files of your pwnagotchi
 2. balenaEtcher - to flash your micro sd card with the pwnagotchi img.
 3. Optionally, you could use a VPN with your pwnagotchi so if that's something you want to do then you can get that now. An option is Proton VPN since you can get the free version of that.
