@@ -37,6 +37,7 @@ You'll need to download a few things before getting started:
 * https://github.com/SHUR1K-N/Project-Pwnag0dchi
 * https://etcher.balena.io/
 * https://www.reddit.com/r/pwnagotchi/comments/jvh8hs/rndis_drivers/
+* https://gist.github.com/fishd72/d3518ef40479a9272f2bd6c425b7af07
 
 ## Steps
 1. Grab your micro sd card and plug it into your computer. You'll open [balenaEtcher](https://etcher.balena.io/)
