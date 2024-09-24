@@ -2,11 +2,16 @@
 [Pwnagotchi](https://pwnagotchi.ai/) is an A2C-based "AI" leveraging bettercap that learns from its surrounding WiFi environment to maximize the crackable WPA key material it captures (either passively, or by performing deauth and association attacks). This material is collected as PCAP files containing any form of handshake supported by hashcat. Pwnagotchi learns over time, the more access your pwnagotchi has to other wifi environments the more it will learn and better it will get. 
 
 ## Table of Contents 
+[Disclaimer](#disclaimer) <BR>
 [Hardware](#hardware) <BR>
 [Prerequisite](#prerequisite)<BR>
-[Important Links](#important-links)<BR>
+[Important links](#important-links)<BR>
 [Steps](#steps)<BR>
-[Steps to make your pwnagotchi better](#steps-to-make-your-pwnagotchi-better)<BR>
+[Steps to make your pwnagotchi better](#steps-to-make-your-pwnagotchi-better)<BR> 
+[How to protect yourself](#how-to-protect-yourself)<BR> 
+
+## Disclaimer
+Only use this on wifis you own. Although there is passive sniffing we don't recommend you use this on other people's wifi that you don't own. This is simply a tutorial to build a small cool device that helps you further your knowledge.
 
 ## Hardware
 To build this there are a few things you'll need:
@@ -16,7 +21,7 @@ To build this there are a few things you'll need:
 4. Micro USB cord that supports data transfer.
 5. Optionally, you can get a Pisugar2 Portable 1200 mAh UPS Lithium Battery so you can take your pwnagotchi with you.
 6. If you'd like to make use of some awesome plugins like saving GPS coordinates whenever an handshake is captured then you'll need a GPS/GLONASS USB.
-7. Lastly, if you like it to lok more professional and not so bare bones you can either buy or 3d print a case for your pwnagotchi.
+7. Lastly, if you like it to look more professional and not so bare bones you can either buy or 3d print a case for your pwnagotchi.
 
 ## Prerequisite 
 You'll need to download a few things before getting started:
@@ -24,7 +29,7 @@ You'll need to download a few things before getting started:
 2. balenaEtcher - to flash your micro sd card with the pwnagotchi img.
 3. Optionally, you could use a VPN with your pwnagotchi so if that's something you want to do then you can get that now. An option is Proton VPN since you can get the free version of that.
 
-## Important Links
+## Important links
 * https://github.com/jayofelony/pwnagotchi
 * https://pwnagotchi.ai/
 * https://github.com/SHUR1K-N/Project-Pwnag0dchi
@@ -79,3 +84,8 @@ You'll need to download a few things before getting started:
 13. Lastly go to your shell/terminal and ssh into your pwnagotchi then type: "sudo nano /etc/pwnagotchi/config.toml"
 14. Here you will need to update the SSID value to whitelist your wifi and do the same for grid exclude.
 15. If you want to auto upload handshakes online and crack them you then you need an API Key but its easy and free. Go to [WPA-SEC.Stanev](https://wpa-sec.stanev.org/). Eneter your email. Get the API key from your email and add it to your config.toml file next to the line called: "main.plugins.wpa-sec.api_key". CTRL X to edit and restart the pwnagotchi. This can also be done using the WEBCFG Plugin rather then using a terminal.
+
+## How to protect yourself
+Having a strong password is essential to protecting your home internet. Even if something like the pwnagotchi gets the handshake in a PCAP file if you have a strong password it will take a very long time to crack. For example there is a table by [oberlin](https://www.oberlin.edu/cit/bulletins/passwords-matter) on an article called "BeCyberSmart: How Fast Can a Hacker Break YOUR Password?" that shows how having, numbers, upper and lower case letters and synbols is so important. If you have that and the password is 11 characters long it can take up to 3 years to crack. If its 12 characters long it can take up to 226 years. 
+
+Many people don't even change the default password from their router which make it even easier to crack assuming its on a word list, which is easy to find out. Morale of the story use strong passwords not just for your home internet but any online accounts.
