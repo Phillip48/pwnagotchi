@@ -27,10 +27,13 @@ You'll need to download a dew things before getting started:
 ## Important Links
 * https://github.com/jayofelony/pwnagotchi
 * https://pwnagotchi.ai/
+* https://github.com/SHUR1K-N/Project-Pwnag0dchi
+* https://etcher.balena.io/
+* https://www.reddit.com/r/pwnagotchi/comments/jvh8hs/rndis_drivers/
 
 ## Steps
 1. Grab your micro sd card and plug it into your computer. You'll open [balenaEtcher](https://etcher.balena.io/)
-2. Go to jayofelony Github page and download the latest pwnagotchi img release. You'll need to download the 32bit img, not 64bit. [Link here](pwnagotchi) - You can find the latest release on the right side of the page under the About Us.
+2. Go to jayofelony Github page and download the latest pwnagotchi img release. You'll need to download the 32bit img, not 64bit. [Link here]([pwnagotchi](https://github.com/jayofelony/pwnagotchi)) - You can find the latest release on the right side of the page under the About Us.
 3. Now in balenaEtcher you will first select "Flash from file" and select the img you downloaded from Github. Then, you'll select your micro sd card as the target. Finally, you'll select Flash to Flash the micro sd card.
 * If the flash is failing you can try unzipping the the folder and selecting the img. That worked for me
 4. Once the flash is completed you can remove the micro sd card form the computer and plug it into your Raspberry PI Zero W.
