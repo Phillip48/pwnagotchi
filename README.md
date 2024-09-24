@@ -2,11 +2,11 @@
 [Pwnagotchi](https://pwnagotchi.ai/) is an A2C-based "AI" leveraging bettercap that learns from its surrounding WiFi environment to maximize the crackable WPA key material it captures (either passively, or by performing deauth and association attacks). This material is collected as PCAP files containing any form of handshake supported by hashcat. Pwnagotchi learns over time, the more access your pwnagotchi has to other wifi environments the more it will learn and better it will get. 
 
 ## Table of Contents 
-[Hardware](#Hardware)
-[Prerequisite](#Prerequisite)
-[Important Links](#Important-Links)
-[Steps](#Steps)
-[Steps to make your pwnagotchi better](#Steps-to-make-your-pwnagotchi-better)
+[Hardware](#hardware) <BR>
+[Prerequisite](#prerequisite)<BR>
+[Important Links](#important-links)<BR>
+[Steps](#steps)<BR>
+[Steps to make your pwnagotchi better](#steps-to-make-your-pwnagotchi-better)<BR>
 
 ## Hardware
 To build this there are a few things you'll need:
