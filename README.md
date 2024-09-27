@@ -102,7 +102,10 @@ Here is a guide to how i used wordlists on Kalil Linux to crack PCAP files. This
    * Basically in the command youre ssh into the pwangotchi and creating a secure copy of the pcap file to the handshakes directory that you created
 8. On google search up hashcat converter and convert the PCAP you want to use with hashcat.
 7. Make sure you have hashcat updated: sudo apt-get install hashcat then sudo apt-get upgrade
-8. In the following steps you have the options you can take with getting the pcap files converted.
+8. In the following steps you have the options you can take with getting the pcap files converted.<br>
+
+![image](https://github.com/user-attachments/assets/cb8bf397-45ad-4195-b84b-ac38801918c5)<br>
+![image](https://github.com/user-attachments/assets/9c7dbf9b-a2b6-40f7-8f09-1c2eb9febf46)
 
 ### Dict Attack
 1. Run the following command: hashcat -m 22000 -a 0 -w 3 /FILPATHTOHH22000FILE/ /FILEPATHOFWORDLIST/
@@ -112,11 +115,18 @@ Here is a guide to how i used wordlists on Kalil Linux to crack PCAP files. This
    * -w 3: This option is for workload tuning. It goes from 1 (low) to 4 (insane), where 3 is generally a safe option that performs well.
   
 ### Brute Force Attack
-1. Run the following command: hashcat -m 22000 -a 3 /FILPATHTOHH22000FILE/ 'MASK,ex:?d?1etc...'
+1. Run the following command: hashcat -m 22000 -a 3 /FILPATHTOHH22000FILE/ ?u?l?l?l?d?d
    * You can use locate and the file name to find the file path.
    * -a 3: This specifies a brute force attack
-![image](https://github.com/user-attachments/assets/9c7dbf9b-a2b6-40f7-8f09-1c2eb9febf46)
+   * The end of the file is the
 
+### [Association Attack](https://hashcat.net/forum/thread-9534-post-50281.html#pid50281)
+This attack requires more knowledge on where the pcap file came from. For example lets say you the know the pcap came from a persons house wiifi. You search up the house using property appraiser and find the persons name is Jake Doe. You can gather information(OSINT) on words that can be used for the wifi. You find his name ofc which is Jake Doe but also he has a dog name Bud, a wife called Sally Doe and maybe you found his birthdate - 01/01/1996. Your word list can include: Jake, Doe, Sally, Bud, 1996, 1, 01, Etc... By doing this and applying rules you are more likely to crack the password than getting lucky on a brute force or dict attack. OFC the more info you gather on the person the better.
+1. Run the following command: hashcat -m 22000 -a 9 /FILPATHTOHH22000FILE/ wordlist.txt -r /FILEPATHFORRULES.TXT/ -o results.txt
+   * -o results.txt: Defines outfile for recovered hash
+   * -a 9: Association attack
+   * -m 22000: The hash type *You could also not include this and let it auto detect*
+   * -r: Defines the rules file 
 
 ## How to protect yourself
 Having a strong password is essential to protecting your home internet. Even if something like the pwnagotchi gets the handshake in a PCAP file if you have a strong password it will take a very long time to crack. For example there is a table by [oberlin](https://www.oberlin.edu/cit/bulletins/passwords-matter) on an article called "BeCyberSmart: How Fast Can a Hacker Break YOUR Password?" that shows how having, numbers, upper and lower case letters and synbols is so important. If you have that and the password is 11 characters long it can take up to 3 years to crack. If its 12 characters long it can take up to 226 years. This usually happens with a brute force attack.
