@@ -8,7 +8,7 @@ For more context the 4-way handshake is a process that happens behind the scenes
 [Hardware](#hardware) <BR>
 [Prerequisite](#prerequisite)<BR>
 [Important links](#important-links)<BR>
-[Steps](#steps)<BR>
+[Steps To Install](#steps-to-install)<BR>
 [Steps to make your pwnagotchi better](#steps-to-make-your-pwnagotchi-better)<BR> 
 [Crack PCAP Files](#crack-pcap-files)<BR> 
 [How to protect yourself](#how-to-protect-yourself)<BR> 
@@ -40,7 +40,7 @@ You'll need to download a few things before getting started:
 * https://www.reddit.com/r/pwnagotchi/comments/jvh8hs/rndis_drivers/
 * https://gist.github.com/fishd72/d3518ef40479a9272f2bd6c425b7af07
 
-## Steps
+## Steps To Install
 1. Grab your micro sd card and plug it into your computer. You'll open [balenaEtcher](https://etcher.balena.io/)
 2. Go to jayofelony Github page and download the latest pwnagotchi img release. You'll need to download the 32bit img, not 64bit. [Link here]([pwnagotchi](https://github.com/jayofelony/pwnagotchi)) - You can find the latest release on the right side of the page under the About Us.
 3. Now in balenaEtcher you will first select "Flash from file" and select the img you downloaded from Github. Then, you'll select your micro sd card as the target. Finally, you'll select Flash to Flash the micro sd card.
