@@ -10,7 +10,7 @@ For more context the 4-way handshake is a process that happens behind the scenes
 [Important links](#important-links)<BR>
 [Steps](#steps)<BR>
 [Steps to make your pwnagotchi better](#steps-to-make-your-pwnagotchi-better)<BR> 
-[Crack PCAP Files](#crack-pcap-files)
+[Crack PCAP Files](#crack-pcap-files)<BR> 
 [How to protect yourself](#how-to-protect-yourself)<BR> 
 
 ## Disclaimer
