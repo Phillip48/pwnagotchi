@@ -10,6 +10,7 @@ For more context the 4-way handshake is a process that happens behind the scenes
 [Important links](#important-links)<BR>
 [Steps](#steps)<BR>
 [Steps to make your pwnagotchi better](#steps-to-make-your-pwnagotchi-better)<BR> 
+[Crack PCAP Files](#crack-pcap-files)
 [How to protect yourself](#how-to-protect-yourself)<BR> 
 
 ## Disclaimer
@@ -87,6 +88,24 @@ You'll need to download a few things before getting started:
 13. Lastly go to your shell/terminal and ssh into your pwnagotchi then type: "sudo nano /etc/pwnagotchi/config.toml"
 14. Here you will need to update the SSID value to whitelist your wifi and do the same for grid exclude.
 15. If you want to auto upload handshakes online and crack them you then you need an API Key but its easy and free. Go to [WPA-SEC.Stanev](https://wpa-sec.stanev.org/). Eneter your email. Get the API key from your email and add it to your config.toml file next to the line called: "main.plugins.wpa-sec.api_key". CTRL X to edit and restart the pwnagotchi. This can also be done using the WEBCFG Plugin rather then using a terminal.
+
+## Crack PCAP Files
+Here is a guide to how i used wordlists on Kalil Linux to crack PCAP files. This is one way to do it but probably not the best. This is just to check some common passwords. For example if the WPA2 key is "plRDQ48B" You are probably NEVER going to crack it with a wordlist. 
+1. Open 2 terminals. 1 to ssh into and the other for your kali host.
+2. On the kali terminal make a directory called handshakes in your desktop
+3. SSH into your pwnagotchi through the Kali terminal.
+4. Get into root
+5. Copy the all PCAP handshakes directory to your pi as root
+6. On you Kali host run the following command: sudo scp pi@10.0.0.2:*pcap /home/USERNAMEHERE/Desktop/handshakes
+7. Enter password of the pwnagotchi
+   * Basically in the command youre ssh into the pwangotchi and creating a secure copy of the pcap file to the handshakes directory that you created
+8. On google search up hashcat converter and convert the PCAP you want to use with hashcat.
+7. Make sure you have hashcat updated: sudo apt-get install hashcat then sudo apt-get upgrade
+9. Run the following command: hashcat -m 22000 -a 0 -w 3 /FILPATHTOHH22000FILE/ /FILEPATHOFWORDLIST/
+   * You can use locate and the file name to find the file path.
+   * -m 22000: This specifies the hash type, in this case, Mode 22000 for WPA/WPA2 captures.
+   * -a 0: This specifies a straight dictionary attack.
+   * -w 3: This option is for workload tuning. It goes from 1 (low) to 4 (insane), where 3 is generally a safe option that performs well.
 
 ## How to protect yourself
 Having a strong password is essential to protecting your home internet. Even if something like the pwnagotchi gets the handshake in a PCAP file if you have a strong password it will take a very long time to crack. For example there is a table by [oberlin](https://www.oberlin.edu/cit/bulletins/passwords-matter) on an article called "BeCyberSmart: How Fast Can a Hacker Break YOUR Password?" that shows how having, numbers, upper and lower case letters and synbols is so important. If you have that and the password is 11 characters long it can take up to 3 years to crack. If its 12 characters long it can take up to 226 years. This usually happens with a brute force attack.
