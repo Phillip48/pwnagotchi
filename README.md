@@ -92,6 +92,7 @@ You'll need to download a few things before getting started:
 ## Crack PCAP Files
 Here is a guide to how i used wordlists on Kalil Linux to crack PCAP files. This is one way to do it but probably not the best. This is just to check some common passwords. For example if the WPA2 key is "plRDQ48B" You are probably NEVER going to crack it with a wordlist. 
 * For more info you can see this video on hashcat attacks: [Youtube](https://www.youtube.com/watch?v=RiX0zfWHS9k)
+* For using rules with hashcat this github has a great repo for that [One Rule to Rule Them All](https://github.com/NotSoSecure/password_cracking_rules)
 1. Open 2 terminals. 1 to ssh into and the other for your kali host.
 2. On the kali terminal make a directory called handshakes in your desktop
 3. SSH into your pwnagotchi through the Kali terminal.
